@@ -2,26 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+input ,textarea,select{
+    @apply  border-2 rounded-md px-1 w-3/5
+}
+input:focus ,textarea:focus{
+    @apply border-green-400 outline-none
+    
+}
+h1{
+    @apply text-blue-900 text-xl mb-2  font-bold
+}
+p{
+    @apply text-blue-900 mt-2 font-semibold
+}
+.btn{
+    @apply bg-blue-900 text-white flex px-4 py-1 rounded-md mt-2
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.btn-delete>button{
+    @apply w-16 p-2  rounded-md  text-white
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.btn-img{
+    @apply w-24 h-24 bg-gray-200 cursor-pointer rounded-md flex justify-center items-center flex-col text-gray-500
 }
